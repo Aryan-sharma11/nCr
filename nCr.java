@@ -9,14 +9,14 @@ public class nCr {
         System.out.println("enter r");
         r=sc.nextInt();
 
-        System.out.println(nCR(n,r));
+        System.out.println(fact(n)/(fact(r)*fact(n-r)));
     }
-    public static int nCR(int n,int r)
+    public static int fact(int f)
     {
-        if(r==0||r==n)
+        if(f==1)
         {
             return 1;
         }
-        return nCR(n-1,r-1)+nCR(n-1,r);
+        return f*fact(f-1);
     }
 }
